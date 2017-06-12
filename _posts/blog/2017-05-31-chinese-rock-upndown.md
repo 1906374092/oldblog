@@ -25,7 +25,7 @@ description: ios内存优化与管理。
 
 
 这样的写法通常情况下不会出错，但是当UIViewController中存在内存泄漏时，比如在block中使用了self的强引用，造成循环引用导致dealloc函数无法执行，所以清空delegate的代码也就不会执行。为了防止这种情况出现，除了检查代码中是否存在循环引用的情况，我们可以把delegate的置空语句写在viewdiddisappear函数里。
-另外，如果你实在找不到究竟是哪句代码导致了内存泄漏，使得dealloc方法无法执行。我们也可以强制从视图栈里移除当前controller
+另外，如果你实在找不到究竟是哪句代码导致了内存泄漏，使得dealloc方法无法执行。就会想到强制从视图栈里移除当前controller
 
 
 ```
@@ -35,4 +35,21 @@ description: ios内存优化与管理。
 ```
 
 
-这样你可以打个断点看一下，dealloc函数是不是执行了。当然在写代码的时候就做好内存管理及优化才是最好的方法。
+这样你可以打个断点看一下，dealloc函数是不是执行了。
+但是这样又出现了新的问题，当我们返回上一页的时候会发现，删除页的UINavigationBar没有从视图栈中移除，这样就需要点击两次返回才会返回到正常的页面。所以上面的方式行不通，我们可以这样写：
+
+``` 
+-(void)viewDidDisappear:(BOOL)animated{
+    NSMutableArray *marr = [[NSMutableArray alloc]initWithArray:self.navigationController.viewControllers];
+//    for (UIViewController *vc in marr) {
+//        if ([vc isKindOfClass:[theVCYouWantToRemove class]]) {
+//            [marr removeObject:vc];
+//            break;
+//        }
+//    }
+    [marr removeObject:self];
+    self.navigationController.viewControllers = marr;
+}
+```
+
+当然在写代码的时候就做好内存管理及优化才是最好的方法。
