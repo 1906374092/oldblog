@@ -5,23 +5,23 @@ category: project
 description: epub，mobi
 ---
 
-# [{{ page.title }}][1]
-2017-08-14 By {{ site.author_info }}
 
-###先上两个重量级的
+
+**先上两个重量级的**
 
 * [苦瓜书盘](https://kgbook.com/)
 * [鸠摩搜书](https://www.jiumodiary.com/)
 
 之前有一段时间苦瓜书盘不能用了，不过现在又可以了。鸠摩搜书搜电子书非常好用。
 
-###还有一些
+**还有一些**
 
 * [blah](http://blah.me/)
 * [我的小书屋](http://mebook.cc/)
 * [iDesks](http://idesks.me/)
 
-###百度网盘
+**百度网盘**
+
 自己查看吧
 
 * [https://yun.baidu.com/share/link?shareid=3055752167&uk=1966436919](https://yun.baidu.com/share/link?shareid=3055752167&uk=1966436919)
