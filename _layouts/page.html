@@ -4,4 +4,7 @@ layout:           default
 
 <div id="content">
     {{ content }}
+    {% if site.intensedebate_comments %}
+        {% include debate-comments.html %}
+    {% endif %}
 </div>

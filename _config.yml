@@ -12,3 +12,5 @@ description: 文青，程序猿，技术宅
 url: http://www.zhangyunfeng.bid
 feed: /atom.xml
 author_info: <a href="http://www.zhangyunfeng.bid/">zhangyunfeng</a>
+
+intensedebate_comments: true
