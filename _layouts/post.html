@@ -72,3 +72,6 @@ layout: default
 </div>
 
 <script src="/js/post.js" type="text/javascript"></script>
+{% if site.intensedebate_comments %}
+    {% include debate-comments.html %}
+{% endif %}
