@@ -38,6 +38,7 @@ sudo pip install BeautifulSoup
 如你所愿这个网站的源码看起来非常整洁。每本书的详细信息包含在section标签内。包括书名，作者，封面url，下载url。结构非常清晰。接下来我们只要用python来拆解这个页面结构，提取出我们需要的信息就行了。
 
 **爬虫编写**
+
 先来看看我们需要做哪些工作。首先，我们需要把网站的完整页面请求下来，这需要用到urllib2,然后我们需要把请求回来的html源码解析出来，提取section标签内的相关信息，这要用到正则表达式，所以要引入re库。最后在需要的信息都提取出来后，我们要把电子书按照书名作建立文件夹，然后把书的封面和书的文件放到文件夹里。到这里就我们的所有逻辑就结束了。是不是很简单。实际操作也非常简洁，不到40行代码就可以完成。下面放代码。
 
 ```
@@ -83,7 +84,7 @@ def spider(rooturl):
 #循环爬取前pagecount页		
 def runpage(pagecount):
 	page = 1
-	while page < pagecount:
+	while page <= pagecount:
 		print(page)
 		rooturl = 'http://idesks.me/?page=%d' % (page)
 		spider(rooturl)
