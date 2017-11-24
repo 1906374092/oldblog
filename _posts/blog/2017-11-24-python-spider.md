@@ -100,3 +100,5 @@ ok，在命令行里cd到bs文件夹下，执行python spider.py。可以在终�
 
 大吉大利，大功告成！
 如过你想要爬取复杂的网站可以系统学习下python爬虫。有很多大型的爬虫框架如scrapy等。找个网站试试吧！
+
+*网站前三页电子书资源及python爬虫源码压缩包点[https://pan.baidu.com/s/1ge4zHIz](https://pan.baidu.com/s/1ge4zHIz)下载，密码:k8em*
