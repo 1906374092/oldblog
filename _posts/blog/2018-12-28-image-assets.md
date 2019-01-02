@@ -20,7 +20,7 @@ description: Assets.xcassets适配
 ![](http://bucket-zyf.oss-cn-beijing.aliyuncs.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-12-28%20%E4%B8%8B%E5%8D%884.23.22.png) 
 
 快看，最上面的两个图片框就是iPhoneX的图片适配，为毛其他的图片没有，也找不到任何菜单可以添加。不甘心。
-分别在自己的图片资源和LaunchImage资源上右键查看菜单，单击show in finder，分别用编辑器打开Contents.json
+分别在自己的图片资源和LaunchImage资源上右键查看菜单，单击show in finder，分别用编辑器打开Contents.jsonp
 
 LaunchImage是这样的:
 
